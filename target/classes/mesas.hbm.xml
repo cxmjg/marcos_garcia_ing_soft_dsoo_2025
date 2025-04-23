@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping">
+<hibernate-mapping>
+    <class name="inscripcionExamen.Mesa" table="mesas">
+
+        <!-- Mapeo de la clave primaria -->
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+
+        <!-- Mapeo de las propiedades -->
+        <property name="fechaInicio" column="fecha_inicio" type="date"/>
+        <property name="fechaFin" column="fecha_fin" type="date"/>
+        <property name="fechaInicioInscripcion" column="fecha_inicio_inscripcion" type="date"/>
+        <property name="fechaFinInscripcion" column="fecha_fin_inscripcion" type="date"/>
+        <property name="fechaCreacion" column="fecha_creacion" type="timestamp"/>
+        <property name="habilitado" column="habilitado"/>
+        
+                <!-- Relación one-to-Many con Examenes -->
+        <set name="examenes" cascade="all">
+            <key column="mesa_id"/>
+            <one-to-many class="inscripcionExamen.Examen"/>
+        </set>
+       
+    </class>
+</hibernate-mapping>

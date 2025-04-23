@@ -1,0 +1,6 @@
+<h1>Sistema de gestion de Inscripciones a Examenes finales</h1>
+<h2>Instituto superior de formacion docente Anexo 328</h2>
+> Desarrollado para la carrera de Tecnicatura Superior en Desarrollo de Software <br>
+<li>Materia Programacion Orientada a Objetos 2024</li>
+<li>Profesor Juan Escapil</li>
+<li>Alumnos Marcos Garcia y Ramiro Sabetta</li>

@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping">
+<hibernate-mapping>
+    <class name="inscripcionExamen.Examen" table="examenes">
+
+        <!-- Mapeo de la clave primaria -->
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+
+        <!-- Mapeo de las propiedades -->
+        <property name="fecha" column="fecha" type="timestamp"/>
+        <property name="habilitado" column="habilitado" type="boolean"/>
+        <property name="fechaCreacion" column="fecha_creacion" type="timestamp"/>
+
+        <!-- Relación Many-to-One con Mesa -->
+        <many-to-one name="mesa" class="inscripcionExamen.Mesa" column="mesa_id" not-null="true"/>
+
+        <!-- Relación Many-to-One con Materia -->
+        <many-to-one name="materia" class="inscripcionExamen.Materia" column="materia_id" not-null="true"/>
+
+        <!-- Relación Many-to-One con Docente 1 -->
+        <many-to-one name="docenteTitular" class="inscripcionExamen.Usuario" column="docenteTitular_id" not-null="true"/>
+
+        <!-- Relación Many-to-One con Docente 2 -->
+        <many-to-one name="docenteVocal" class="inscripcionExamen.Usuario" column="docenteVocal_id" not-null="true"/>
+
+
+
+    </class>
+</hibernate-mapping>

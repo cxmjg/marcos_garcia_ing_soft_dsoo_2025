@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping">
+<hibernate-mapping>
+    <class name="inscripcionExamen.Rol" table="roles">
+
+        <!-- Mapeo de la clave primaria -->
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+
+        <!-- Mapeo de las propiedades -->
+        <property name="nombre" column="nombre"/>
+        <property name="descripcion" column="descripcion"/>
+       
+    </class>
+</hibernate-mapping>
