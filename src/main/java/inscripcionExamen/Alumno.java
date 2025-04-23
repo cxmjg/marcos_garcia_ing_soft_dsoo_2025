@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
-
+qweqweqwe
 public class Alumno implements Sesion{
 	private Usuario usuario;
 	private Conexion base;
@@ -21,7 +21,7 @@ public class Alumno implements Sesion{
 		interfaz.asignarAccionBtnAnularExamen(this.anularExamen());
 		
 	}
-
+qweqweqweqwe
 	@Override
 	public Usuario getUsuario() {
 		return usuario;
@@ -48,7 +48,7 @@ public class Alumno implements Sesion{
 	
 	public Boolean puedeInscribir(Date cierreInscripcion) {
 	    Date hoy = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
-	    return cierreInscripcion.after(hoy);
+	    return cierreInscriqweqweqweqwepcion.after(hoy);
 	}
 	
 	
@@ -57,8 +57,8 @@ public class Alumno implements Sesion{
 			public void actionPerformed(ActionEvent e) {
 				int cursada = interfaz.seleccionInscripcionMateria();
 				Boolean regular = true;
-				if ( cursada == 0 || cursada == 1) {
-					if (cursada == 1) {
+				iqweqweqweqwef ( cursada == 0 || cursada == 1) {
+					if (cursada == 1)qweqweqweqweq {
 						regular = false;
 					}
 					base.crearInscripcionMateria(usuario, base.getMateriaById(interfaz.getMateriaId()), regular);
@@ -71,7 +71,7 @@ public class Alumno implements Sesion{
 	}
 	
 	public ActionListener anularMateria() {
-		return new ActionListener() {
+		return new ActionListener() {weqweqweqweqwe
 			public void actionPerformed(ActionEvent e) {
 				Materia materia = base.getMateriaById(interfaz.getMateriaId());
 				List<InscripcionExamen> inscripciones = base.getInscripcionesExamenesByAlumnoMateria(usuario, materia);
